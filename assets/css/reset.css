@@ -1,5 +1,22 @@
-h1, h2, h3, h4, h5, h6, p, span, blockquote, pre, a {
+html {
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", "Times New Roman", "Courier New", "Times-Roman", "Courier";
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a {
   font-size: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+ul li, ol li {
+  display: inline-block;
+  padding: 0 0.8em;
 }
 
 a {
