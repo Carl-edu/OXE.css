@@ -1,0 +1,12 @@
+.container-fluid {
+  margin: 0 2rem;
+}
+.container-fluid .row {
+  display: flex;
+}
+
+/* Telas */
+/* Small-devices */
+/* Medium-devices */
+/* Large-devices */
+/* Extra_Large-devices */
