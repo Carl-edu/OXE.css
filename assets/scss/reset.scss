@@ -8,7 +8,7 @@ body{
 }
 
 //Reset all fonts size
-h1,h2,h3,h4,h5,h6,p,b,i,em,span,blockquote,pre,a,small,strong,label,input, table,tr, td
+h1,h2,h3,h4,h5,h6,p,b,i,em,span,blockquote,pre,a,small,strong,label,input, table,tr, td,button,input,mark
 {
    font-size: 100%;
    margin: 0;
@@ -37,8 +37,8 @@ a{
    }
 }
 
-
-table, tr, td {
+//tr, td and blockquote
+ tr, td {
    border: 1px solid #464646;
    padding: 0 0.3125em;
 }
@@ -46,3 +46,19 @@ table, tr, td {
 blockquote::before, blockquote::after{
    content: '';
 }
+
+//reset button
+button,button[type="disabled"], button[type="reset"], button[type="submit"],[type="button"] 
+{
+   border-style: none;
+   &::hover{
+     cursor: pointer;
+   }
+}
+
+input,input[type="email"],input[type="file"],input[type="datetime-local"],input[type="password"]{
+   padding: 0 0.3125em;
+   border-style: none;
+}
+
+

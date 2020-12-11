@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a, small, strong, label, input, table, tr, td {
+h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a, small, strong, label, input, table, tr, td, button, input, mark {
   font-size: 100%;
   margin: 0;
   padding: 0;
@@ -31,11 +31,23 @@ a:hover {
   cursor: pointer;
 }
 
-table, tr, td {
+tr, td {
   border: 1px solid #464646;
   padding: 0 0.3125em;
 }
 
 blockquote::before, blockquote::after {
   content: "";
+}
+
+button, button[type=disabled], button[type=reset], button[type=submit], [type=button] {
+  border-style: none;
+}
+button::hover, button[type=disabled]::hover, button[type=reset]::hover, button[type=submit]::hover, [type=button]::hover {
+  cursor: pointer;
+}
+
+input, input[type=email], input[type=file], input[type=datetime-local], input[type=password] {
+  padding: 0 0.3125em;
+  border-style: none;
 }
