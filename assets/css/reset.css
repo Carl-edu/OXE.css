@@ -1,0 +1,41 @@
+html {
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", "Times New Roman", "Courier New", "Times-Roman", "Courier";
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a, small, strong, label, input, table, tr, td {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+ul li, ol li {
+  display: inline-block;
+  padding: 0 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: #464646;
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  cursor: pointer;
+}
+
+table, tr, td {
+  border: 1px solid #464646;
+  padding: 0 0.3125em;
+}
+
+blockquote::before, blockquote::after {
+  content: "";
+}

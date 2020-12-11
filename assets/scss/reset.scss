@@ -6,10 +6,13 @@ html{
 body{
    margin:0;
 }
+
 //Reset all fonts size
-h1,h2,h3,h4,h5,h6,p,b,i,em,span,blockquote,pre,a
+h1,h2,h3,h4,h5,h6,p,b,i,em,span,blockquote,pre,a,small,strong,label,input, table,tr, td
 {
    font-size: 100%;
+   margin: 0;
+   padding: 0;
 }
 
 //Reset nav and links
@@ -23,10 +26,23 @@ ul,ol{
    }
 }
 
+
 a{
    text-decoration: none;
    color: #464646;
+   margin: 0;
+   padding: 0;
    &:hover{
       cursor: pointer;
    }
+}
+
+
+table, tr, td {
+   border: 1px solid #464646;
+   padding: 0 0.3125em;
+}
+
+blockquote::before, blockquote::after{
+   content: '';
 }
