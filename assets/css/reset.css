@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a, small, strong, label, input, table, tr, td, button, input, mark {
+h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a, small, strong, label, input, table, tr, td, button, input, mark, code, main, article, aside {
   font-size: 100%;
   margin: 0;
   padding: 0;
