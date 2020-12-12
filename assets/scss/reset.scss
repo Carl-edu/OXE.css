@@ -51,7 +51,7 @@ blockquote::before, blockquote::after{
 button,button[type="disabled"], button[type="reset"], button[type="submit"],[type="button"] 
 {
    border-style: none;
-   &::hover{
+   &:hover{
      cursor: pointer;
    }
 }

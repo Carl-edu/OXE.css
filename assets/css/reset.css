@@ -43,7 +43,7 @@ blockquote::before, blockquote::after {
 button, button[type=disabled], button[type=reset], button[type=submit], [type=button] {
   border-style: none;
 }
-button::hover, button[type=disabled]::hover, button[type=reset]::hover, button[type=submit]::hover, [type=button]::hover {
+button:hover, button[type=disabled]:hover, button[type=reset]:hover, button[type=submit]:hover, [type=button]:hover {
   cursor: pointer;
 }
 
