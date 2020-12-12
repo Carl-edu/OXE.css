@@ -1,0 +1,81 @@
+/* Variaveis */
+$total_colunas: 24;
+$telas: '','-sm','-md','-lg','-xl';
+$alinhamento: 'start','center','end','top','middle','bottom';
+
+/* Funções */
+@function gerar_coluna($n_coluna){
+
+    @return percentage($n_coluna/$total_colunas);
+}
+
+/*---------------------*/
+
+.container-fluid{
+    margin: 0 2rem;
+
+    .row{
+        display: flex;
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Telas */
+
+@each $var in $telas {
+    /*Tela#{$var}*/
+    
+    @if $var == ''{
+        @for $i from 1 through $total_colunas{
+            .col#{$var}-#{$i}{
+                width: gerar_coluna($i);
+            }
+        }
+
+    }
+    
+    @if $var == '-sm' {
+        @media(max-width: 640px){
+            @for $i from 1 through $total_colunas{
+                .col#{$var}-#{$i}{
+                    width: gerar_coluna($i);
+                }
+            }
+        }
+    }
+    
+    @if $var == '-md'{
+        @media (min-width: 641px) and (max-width: 1007px){
+            @for $i from 1 through $total_colunas{
+                .col#{$var}-#{$i}{
+                    width: gerar_coluna($i);
+                }
+            }
+        }    
+    
+    }
+    
+    @if $var == '-lg'{
+        @media (min-width: 1008px){
+            @for $i from 1 through $total_colunas{
+                .col#{$var}-#{$i}{
+                    width: gerar_coluna($i);
+                }
+            }
+
+            .container-fluid{
+                margin: 0 3rem;
+            }
+
+        }
+    }
+
+
+    
+    /*---------------------*/
+
+}
