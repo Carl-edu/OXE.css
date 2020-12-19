@@ -1,12 +1,33 @@
 /* Variaveis */
 $total_colunas: 24;
 $telas: '','-sm','-md','-lg','-xl';
-$alinhamento: 'start','center','end','top','middle','bottom';
+$alinhamento_V: 'start','center','end';
+$alinhamento_H: 'top','middle','bottom','between', 'around';
 
 /* Funções */
 @function gerar_coluna($n_coluna){
 
     @return percentage($n_coluna/$total_colunas);
+}
+
+@function retornar($linha){
+    @if $linha == 'start'{
+        @return flex-start;
+    } @else if $linha == 'center'{
+        @return center;
+    } @else if $linha == 'end'{
+        @return flex-end;
+    } @else if $linha == 'top'{
+        @return flex-start;
+    } @else if $linha == 'middle'{
+        @return center;
+    } @else if $linha == 'bottom'{
+        @return flex-end;
+    } @else if $linha == 'between'{
+        @return space-between;
+    } @else if $linha == 'around'{
+        @return space-around;
+    }
 }
 
 /*---------------------*/
@@ -36,6 +57,17 @@ $alinhamento: 'start','center','end','top','middle','bottom';
             }
         }
 
+        @each $i in $alinhamento_V {
+            .#{$i}#{$var}{
+                align-items: retornar($i);
+            }
+        }
+
+        @each $i in $alinhamento_H {
+            .#{$i}#{$var}{
+                justify-content: retornar($i);
+            }
+        }
     }
     
     @if $var == '-sm' {
@@ -43,6 +75,18 @@ $alinhamento: 'start','center','end','top','middle','bottom';
             @for $i from 1 through $total_colunas{
                 .col#{$var}-#{$i}{
                     width: gerar_coluna($i);
+                }
+            }
+
+            @each $i in $alinhamento_V {
+                .#{$i}#{$var}{
+                    align-items: retornar($i);
+                }
+            }
+    
+            @each $i in $alinhamento_H {
+                .#{$i}#{$var}{
+                    justify-content: retornar($i);
                 }
             }
         }
@@ -53,6 +97,18 @@ $alinhamento: 'start','center','end','top','middle','bottom';
             @for $i from 1 through $total_colunas{
                 .col#{$var}-#{$i}{
                     width: gerar_coluna($i);
+                }
+            }
+
+            @each $i in $alinhamento_V {
+                .#{$i}#{$var}{
+                    align-items: retornar($i);
+                }
+            }
+    
+            @each $i in $alinhamento_H {
+                .#{$i}#{$var}{
+                    justify-content: retornar($i);
                 }
             }
         }    
@@ -71,11 +127,19 @@ $alinhamento: 'start','center','end','top','middle','bottom';
                 margin: 0 3rem;
             }
 
+            @each $i in $alinhamento_V {
+                .#{$i}#{$var}{
+                    align-items: retornar($i);
+                }
+            }
+    
+            @each $i in $alinhamento_H {
+                .#{$i}#{$var}{
+                    justify-content: retornar($i);
+                }
+            }
+
         }
     }
-
-
-    
     /*---------------------*/
-
 }
