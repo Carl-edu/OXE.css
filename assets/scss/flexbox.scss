@@ -1,16 +1,16 @@
-/* Variaveis */
+/* variables */
 $total_colunas: 24;
 $telas: '','-sm','-md','-lg','-xl';
 $alinhamento_V: 'start','center','end';
 $alinhamento_H: 'top','middle','bottom','between', 'around';
 
-/* Funções */
+/* Functions */
 @function gerar_coluna($n_coluna){
 
     @return percentage($n_coluna/$total_colunas);
 }
 
-@function retornar($linha){
+@function return_row($linha){
     @if $linha == 'start'{
         @return flex-start;
     } @else if $linha == 'center'{
@@ -59,13 +59,13 @@ $alinhamento_H: 'top','middle','bottom','between', 'around';
 
         @each $i in $alinhamento_V {
             .#{$i}#{$var}{
-                align-items: retornar($i);
+                align-items: return_row($i);
             }
         }
 
         @each $i in $alinhamento_H {
             .#{$i}#{$var}{
-                justify-content: retornar($i);
+                justify-content: return_row($i);
             }
         }
     }
@@ -80,13 +80,13 @@ $alinhamento_H: 'top','middle','bottom','between', 'around';
 
             @each $i in $alinhamento_V {
                 .#{$i}#{$var}{
-                    align-items: retornar($i);
+                    align-items: return_row($i);
                 }
             }
     
             @each $i in $alinhamento_H {
                 .#{$i}#{$var}{
-                    justify-content: retornar($i);
+                    justify-content: return_row($i);
                 }
             }
         }
@@ -102,13 +102,13 @@ $alinhamento_H: 'top','middle','bottom','between', 'around';
 
             @each $i in $alinhamento_V {
                 .#{$i}#{$var}{
-                    align-items: retornar($i);
+                    align-items: return_row($i);
                 }
             }
     
             @each $i in $alinhamento_H {
                 .#{$i}#{$var}{
-                    justify-content: retornar($i);
+                    justify-content: return_row($i);
                 }
             }
         }    
@@ -129,13 +129,13 @@ $alinhamento_H: 'top','middle','bottom','between', 'around';
 
             @each $i in $alinhamento_V {
                 .#{$i}#{$var}{
-                    align-items: retornar($i);
+                    align-items: return_row($i);
                 }
             }
     
             @each $i in $alinhamento_H {
                 .#{$i}#{$var}{
-                    justify-content: retornar($i);
+                    justify-content: return_row($i);
                 }
             }
 
