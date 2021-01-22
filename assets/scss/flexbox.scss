@@ -1,8 +1,8 @@
 /* variables */
 $total_colunas: 24;
 $telas: '','-sm','-md','-lg','-xl';
-$alinhamento_V: 'start','center','end';
-$alinhamento_H: 'top','middle','bottom','between', 'around';
+$alinhamento_V: 'top','middle','bottom';
+$alinhamento_H: 'start','center','end','between', 'around';
 
 /* Functions */
 @function gerar_coluna($n_coluna){
