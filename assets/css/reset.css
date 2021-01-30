@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6, p, b, i, em, span, blockquote, pre, a, small, strong, la
   font-size: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul, ol {
@@ -43,7 +44,7 @@ blockquote::before, blockquote::after {
 button, button[type=disabled], button[type=reset], button[type=submit], [type=button] {
   border-style: none;
 }
-button::hover, button[type=disabled]::hover, button[type=reset]::hover, button[type=submit]::hover, [type=button]::hover {
+button:hover, button[type=disabled]:hover, button[type=reset]:hover, button[type=submit]:hover, [type=button]:hover {
   cursor: pointer;
 }
 

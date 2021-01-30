@@ -13,6 +13,7 @@ h1,h2,h3,h4,h5,h6,p,b,i,em,span,blockquote,pre,a,small,strong,label,input, table
    font-size: 100%;
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
 //Reset nav and links
@@ -51,7 +52,7 @@ blockquote::before, blockquote::after{
 button,button[type="disabled"], button[type="reset"], button[type="submit"],[type="button"] 
 {
    border-style: none;
-   &::hover{
+   &:hover{
      cursor: pointer;
    }
 }
@@ -62,3 +63,4 @@ input,input[type="email"],input[type="file"],input[type="datetime-local"],input[
 }
 
 
+//*_______*//
